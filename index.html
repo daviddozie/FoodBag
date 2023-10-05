@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FoodBag</title>
+    <!--swiper.js-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!--bootstrap-library-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--Boxicon-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--font awesome-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fontawesome.com/icons/threads?f=brands&s=solid">
+    <!--font awesome script-->
+    <script src="https://kit.fontawesome.com/b947a64090.js" crossorigin="anonymous"></script>
+    <!--google font poppins-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--css-->
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-delay="100">
+    <header id="header">
+        <!------------Navigation------------>
+        <nav class="navbar navbar-expand-lg container-fluid py-4">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">Food<span>Bag</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cart</a>
+                        </li>
+                        <li class="nav-item px-lg-5">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <button class="btn btn-outline-success" type="submit">Sign up</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!----------------Navigation-end---------------->
+    </header>
+    <main>
+        <!-------------Hero-sec------------>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-title text-center mt-5 py-5" data-aos="fade-up">
+                    <h1>FoodBag</h1>
+                    <p>Anything food, we have you covered.</p>
+                </div>
+                <div class="label-wrapper" data-aos="fade-up" data-aos-delay="300">
+                    <label for="Location" class="form-label">Where are you?</label>
+                    <select class="form-select" id="location">
+                        <option value="">Enter location</option>
+                        <option value="Ojo raod">Ojo Road</option>
+                        <option value="Ikeja">Ikeja</option>
+                        <option value="Lekki">Lekki</option>
+                        <option value="Male 2">Male 2</option>
+                        <option value="Ojo">Ojo</option>
+                        <option value="Festac">Festac</option>
+                    </select>
+                </div>
+                <div class="interest-wrapper pt-5" data-aos="zoom-in">
+                    <p>Pick an interest</p>
+                    <div class="row pb-lg-5">
+                        <div class="interest-box col-lg-3 col-md-6 mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="border">
+                                <div class="gray-wrapper gray1">
+                                    <div class="py-4 px-3">
+                                        <img src="./images/fast-food-gray.jpg" alt="fast-food-gray">
+                                        <p class="py-3">Fast food</p>
+                                        <span>All sorrows are less with bread.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="highlight red1">
+                                    <div class="py-4 px-3">
+                                        <img src="./images/fast-food.png" alt="fast-food">
+                                        <p class="py-3">Fast food</p>
+                                        <span>All sorrows are less with bread.</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="interest-box col-lg-3 col-md-6 mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="border">
+                                <div class="gray-wrapper gray2">
+                                    <div class="py-4 px-3">
+                                        <img src="./images/vegetable-gray.jpg" alt="vegetable-gray">
+                                        <p class="py-3">Vegetables & Fruits</p>
+                                        <span>May not want it, but good for you.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="highlight red2">
+                                    <div class="py-4 px-3">
+                                        <img src="./images/vegetable.jpg" alt="vegetable">
+                                        <p class="py-3">Vegetables & Fruits</p>
+                                        <span class="">May not want it, but good for you.</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="interest-box col-lg-3 col-md-6 mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="border">
+                                <div class="gray-wrapper gray3">
+                                    <div class="py-4 px-3">
+                                        <img src="./images/cocktail-gray.jpg" alt="cocktail-gray">
+                                        <p class="py-3">Drinks & Cocktails</p>
+                                        <span>I feel sad for those who don't drink.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="highlight red3">
+                                    <div class="py-4 px-3">
+                                        <img src="./images/cocktail.jpg" alt="cocktail">
+                                        <p class="py-3">Drinks & Cocktails</p>
+                                        <span class="">I feel sad for those who don't drink.</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="interest-box col-lg-3 col-md-6 mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="border">
+                                <div class="gray-wrapper gray4">
+                                    <div class="py-4 px-3">
+                                        <img src="./images/fork-gray.jpg" alt="fork-gray">
+                                        <p class="py-3">Resturants</p>
+                                        <span>All sorrows are less with bread.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="highlight red4">
+                                    <div class="py-4 px-3">
+                                        <img src="./images/fork.jpg" alt="fork">
+                                        <p class="py-3">Resturants</p>
+                                        <span class="">All sorrows are less with bread.</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line mt-3 mb-5" data-aos="zoom-in"></div>
+                <div class="procedure pt-5" data-aos="fade-up">
+                    <div class="procedure-title text-center">
+                        <h1>How we serve you</h1>
+                        <div class="row py-5">
+                            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                                <div class="procedure-wrapper">
+                                    <img src="./images/man-map.png" alt="man-map">
+                                    <p class="text-center">Tell us where you are</p>
+                                    <span class="text-center">Select the location you want<br> us to deliver.</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+                                <div class="procedure-wrapper">
+                                    <img src="./images/drink-cake.png" alt="drink-cake">
+                                    <p class="text-center">Tell us what you want</p>
+                                    <span class="text-center">Browse the type of food that<br> interest you.</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+                                <div class="procedure-wrapper">
+                                    <img src="./images/bike-man.png" alt="bike-man">
+                                    <p class="text-center">We'll come running</p>
+                                    <span class="text-center">Your order will be delivered to<br> you in no time.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line mt-5 mb-5" data-aos="zoom-in"></div>
+            </div>
+        </section>
+        <!---------contacts--------->
+        <section id="contacts" data-aos="zoom-in">
+            <div class="text-center contacts-title">
+                <a href="#">
+                    <h5>Contact Us</h5>
+                </a>
+            </div>
+            <div class="social-icons text-center">
+                <a href="#">
+                    <i class="fa-brands fa-twitter icon"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram icon"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f icon"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+    <!------------footer------------->
+    <footer id="footer" class="my-4">
+        <div class="container mt-5">
+            <div class="d-lg-flex footer-wrapper">
+                <div class="col-lg-6 text-lg-start me-lg-auto text-center">
+                    <p class="">Terms & Conditions . Privacy Policy</p>
+                </div>
+                <div class="col-lg-6 text-lg-end me-lg-auto text-center">
+                    <p class="mb-0">&copy;Copyright 2021 FoodBag is a registered trademark</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            delay: 100,
+            easing: 'ease-in-out',
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
