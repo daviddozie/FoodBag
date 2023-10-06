@@ -6,10 +6,23 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 a:link {
     text-decoration: none;
+}
+
+main {
+    overflow: hidden;
 }
 
 .navbar-brand {
@@ -44,6 +57,20 @@ a:link {
     color: #AD4C4C !important;
 }
 
+.cart {
+    position: relative;
+}
+
+.bi-dot {
+    position: absolute;
+    bottom: 0px;
+    top: 2px;
+    left: 962px;
+    color: #AD4C4C;
+    font-size: 50px;
+    display: none;
+}
+
 .btn-outline-success {
     border: 1px solid #AD4C4C !important;
     color: #AD4C4C !important;
@@ -63,10 +90,12 @@ a:link {
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
+   
 }
 
 .direct-wrapper p {
     color: #C9C9C9;
+    margin-top: 100px;
 }
 
 .direct-wrapper span {
@@ -78,4 +107,116 @@ a:link {
     line-height: 45px;
     font-weight: 500;
     color: #000000;
+}
+
+.kfc-icon-wrapper P {
+    white-space: nowrap;
+}
+
+.kfc-icon-wrapper {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #000000;
+}
+
+.kfc-view-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #AD4C4C;
+}
+
+.pricing-wrapper p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #4E4D4D;
+}
+
+.bx-dollar {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 27px;
+}
+
+.pricing-wrapper span {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #5EA304;
+    margin-left: 55px;
+}
+
+.btn-outline-primary {
+    border: 1px solid #AD4C4C !important;
+    background-color: #ffffff !important;
+    color: #AD4C4C !important;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 10px 30px;
+    border-radius: 3px !important;
+    transition: all ease-in-out 0.5s;
+}
+
+.btn-outline-primary:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 10px 20px 0px #C9C9C9;
+}
+
+.remove-btn {
+    border-radius: 3px;
+    padding: 10px 20px;
+    padding-right: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #E6E6E6 !important;
+    background-color: #A5A5A5 !important;
+    border: 1px solid #A5A5A5 !important;
+    transition: all ease-in-out 0.5s;
+    display: none;
+ }
+
+.remove-icon-btn {
+    color: #E6E6E6;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.remove-btn:hover {
+    box-shadow: 0px 10px 20px 0px #C9C9C9;
+    transform: scale(1.01);
+}
+
+.line {
+    border: 1px solid #E6E6E6;
+    margin: 60px 0px;
+}
+
+.kfc-img {
+    transition: ease-in-out 0.5s;
+    overflow-x: hidden;
+}
+
+.kfc-img:hover {
+    transform: translateY(-10px);
+}
+
+@media only screen and (max-width: 765px) {
+    .kfc-img {
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .kfc-img {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .kfc-img {
+        width: 300px;
+    }
 }
