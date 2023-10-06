@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.navbar-brand {
+    color: #000000 !important;
+    font-size: 20px !important;
+    line-height: 30px !important;
+}
+
+.navbar-brand span {
+    color: #AD4C4C !important;
+}
+
+.fa-bars {
+    font-size: 30px !important;
+    color: #923535 !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0px 0px 10px #813b3b !important;
+    outline: none;
+}
+
+.nav-link {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+    color: #696969 !important;
+    transition: ease-in-out 0.5s;
+}
+
+.nav-link:hover {
+    color: #AD4C4C !important;
+}
+
+.btn-outline-success {
+    border: 1px solid #AD4C4C !important;
+    color: #AD4C4C !important;
+    background-color: #ffffff;
+    transition: ease-in-out 0.5s;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+}
+
+.btn-outline-success:hover {
+    color: #ffffff !important;
+    background-color: #AD4C4C;
+}
+
+.direct-wrapper {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+.direct-wrapper p {
+    color: #C9C9C9;
+}
+
+.direct-wrapper span {
+    color: #000000;
+}
+
+.vendor-title h2 {
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 500;
+    color: #000000;
+}
