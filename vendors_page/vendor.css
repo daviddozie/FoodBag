@@ -58,7 +58,7 @@ main {
 }
 
 .cart {
-    position: relative;
+    position: relative !important;
 }
 
 .bi-dot {
@@ -145,7 +145,6 @@ main {
     font-weight: 600;
     line-height: 27px;
     color: #5EA304;
-    margin-left: 55px;
 }
 
 .btn-outline-primary {
@@ -203,7 +202,40 @@ main {
     transform: translateY(-10px);
 }
 
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 990px) {
+    .bi-dot {
+        position: absolute;
+        color: #AD4C4C;
+        left: 140px;
+        top: 40px;
+        display: none;
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .bi-dot {
+        position: absolute;
+        color: #AD4C4C;
+        left: 70px;
+        top: 40px;
+        display: none;
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .bi-dot {
+        position: absolute;
+        color: #AD4C4C;
+        left: 50px;
+        top: 40px;
+        display: none;
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 766px) {
     .kfc-img {
         width: 500px;
     }
@@ -213,10 +245,28 @@ main {
     .kfc-img {
         width: 400px;
     }
+
+    .bi-dot {
+        position: absolute;
+        color: #AD4C4C;
+        left: 26px;
+        top: 40px;
+        display: none;
+        font-size: 50px;
+    }
 }
 
 @media only screen and (max-width: 430px) {
     .kfc-img {
         width: 300px;
+    }
+
+    .bi-dot {
+        position: absolute;
+        color: #AD4C4C;
+        left: 24px;
+        top: 40px;
+        display: none;
+        font-size: 50px;
     }
 }
