@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cart</title>
+    <!--swiper.js-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!--bootstrap-library-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!---------------bootstrap-cdn---------------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!--Boxicon-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--font awesome-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fontawesome.com/icons/threads?f=brands&s=solid">
+    <!--font awesome script-->
+    <script src="https://kit.fontawesome.com/b947a64090.js" crossorigin="anonymous"></script>
+    <!--google font poppins-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--css-->
+    <link rel="stylesheet" href="./cart.css">
+</head>
+
+<body data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-delay="100">
+    <header id="header">
+        <!------------Navigation------------>
+        <nav class="navbar navbar-expand-lg container-fluid py-4">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="../index.html">Food<span>Bag</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link cart" href="../cart_page/cart.html">Cart</a>
+                        </li>
+                        <li class="nav-item px-lg-5">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <button class="btn btn-outline-success" type="submit">Sign up</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!----------------Navigation-end---------------->
+    </header>
+    <main>
+        <div class="container">
+            <div class="direct-wrapper pt-5 pb-3" data-aos="fade-left">
+                <p>Home > <span>Cart</span></p>
+            </div>
+            <div class="vendor-title" data-aos="zoom-out">
+                <h2>Cart</h2>
+            </div>
+            <div class="row item-wrapper pt-5">
+                <div class="col-lg-6 d-flex col-sm-7">
+                    <div class="mt-4 me-3 d-none d-md-block">
+                        <i class="fa-solid fa-xmark text-light"></i>
+                    </div>
+                    <div>
+                        <img src="./images/bucket.jpg" alt="">
+                    </div>
+                    <div class="ps-3">
+                        <p class="text-secondary">KFC - King Bucket</p>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-light minusbtn1 text-start">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <p class="text-center px-3 mb-0 text-success numbercount1">1</p>
+                            <button type="button" class="btn btn-light addbtn1 text-end">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-md-end pt-4 col-sm-5 cost-wrapper text-start">
+                    <span class="text-danger" id="itemcost1"><i class='bx bx-dollar dollar'></i>5,000</span>
+                </div>
+            </div>
+            <div class="border my-4"></div>
+            <div class="row item-wrapper">
+                <div class="col-lg-6 d-flex col-sm-7">
+                    <div class="mt-4 me-3 d-none d-md-block">
+                        <i class="fa-solid fa-xmark text-light"></i>
+                    </div>
+                    <div>
+                        <img src="./images/refuel.png" alt="">
+                    </div>
+                    <div class="ps-3">
+                        <p class="text-secondary">Refuel Max</p>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-light text-start minusbtn2">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <p class="text-center px-3 mb-0 text-success numbercount2">1</p>
+                            <button type="button" class="btn btn-light text-end addbtn2">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-md-end pt-4 col-sm-5 cost-wrapper text-start">
+                    <span class="text-danger" id="itemcost2"><i class='bx bx-dollar dollar'></i>1,200</span>
+                </div>
+            </div>
+            <div class="border my-4"></div>
+            <div class="row item-wrapper">
+                <div class="col-lg-6 d-flex col-sm-7">
+                    <div class="mt-4 me-3 d-none d-md-block">
+                        <i class="fa-solid fa-xmark text-light"></i>
+                    </div>
+                    <div>
+                        <img src="./images/refuel-max.png" alt="">
+                    </div>
+                    <div class="ps-3">
+                        <p class="text-secondary">Refuel Max</p>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-light text-start minusbtn3">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <p class="text-center px-3 mb-0 text-success numbercount3">1</p>
+                            <button type="button" class="btn btn-light text-end addbtn3">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-md-end pt-4 col-sm-5 cost-wrapper text-start">
+                    <span class="text-danger" id="itemcost3"><i class='bx bx-dollar dollar'></i>1,200</span>
+                </div>
+            </div>
+            <div class="border my-4"></div>
+            <div class="row">
+                <div class="col-lg-6 col-sm-7 d-flex">
+                    <div>
+                        <img src="./images/bike.jpg" alt="">
+                    </div>
+                    <div class="ps-5">
+                        <p class="text-secondary pt-5">Delivery fee</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-5 text-md-end pt-md-4 cost-wrapper text-start">
+                    <span class="text-danger"><i class='bx bx-dollar dollar'></i>1,200</span>
+                </div>
+            </div>
+            <div class="border my-4"></div>
+            <div class="row total">
+                <div class="col-6 text-start">
+                    <h2>Total</h2>
+                </div>
+                <div class="col-6 total text-end">
+                    <h1 id="sum"><i class='bx bx-dollar big-dollar'></i>8600</h1>
+                </div>
+            </div>
+            <div class="text-center pt-4 pb-5">
+                <button type="submit" class="btn btn-info w-75">Checkout</button>
+            </div>
+        </div>
+    </main>
+    <!-------------Bootstrap-script---------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!--------------------Aos-init--------------------------->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            delay: 100,
+            easing: 'ease-in-out',
+        });
+    </script>
+    <!------------js--------------------->
+    <script src="./cart.js"></script>
+</body>
+
+</html>
