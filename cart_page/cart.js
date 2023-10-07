@@ -21,6 +21,7 @@ const items = [
 const totalcost = document.getElementById("sum");
 totalcost.textContent = 1200;
 
+
 for (let i = 0; i <= items.length; i++) {
     const addItem = document.getElementsByClassName(`addbtn${i + 1}`)[0];
     const minusItem = document.getElementsByClassName(`minusbtn${i + 1}`)[0];
