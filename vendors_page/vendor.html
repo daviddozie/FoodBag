@@ -53,9 +53,71 @@
                             <a class="nav-link" href="#">Login</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <button class="btn btn-outline-success" type="submit">Sign up</button>
-                    </form>
+                    <button class="btn btn-outline-success" type="button" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Sign up</button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1><a class="navbar-brand fw-bold" href="../index.html">Food<span>Bag</span></a>
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="formValidation">
+                                        <div class="row">
+                                            <div class="mb-3 col-lg-6">
+                                                <label for="firstname" class="col-form-label">First Name:</label>
+                                                <input type="text" class="form-control" id="firstname">
+                                                <span class="error-block"></span>
+                                            </div>
+                                            <div class="mb-3 col-lg-6">
+                                                <label for="lastname" class="col-form-label">Last Name:</label>
+                                                <input type="text" class="form-control" id="lastname">
+                                                <span class="error-block"></span>
+                                            </div>
+                                            <div class="mb-3 col-lg-6">
+                                                <label for="email" class="col-form-label">Email:</label>
+                                                <input type="text" class="form-control" id="email">
+                                                <span class="error-block"></span>
+                                            </div>
+                                            <div class="mb-3 col-lg-6">
+                                                <label for="phonenumber" class="col-form-label">Phone Number:</label>
+                                                <input type="text" class="form-control" id="phonenumber">
+                                                <span class="error-block"></span>
+                                            </div>
+                                            <div class="mb-3 col-lg-6 position-relative">
+                                                <label for="password" class="col-form-label">Password:</label>
+                                                <input type="password" class="form-control password1" id="password">
+                                                <span class="error-block"></span>
+                                                <i class="fa-solid fa-eye hidep1 position-absolute text-secondary"></i>
+                                                <i
+                                                    class="fa-solid fa-eye-slash showp1 text-secondary position-absolute"></i>
+                                            </div>
+                                            <div class="mb-3 col-lg-6 position-relative">
+                                                <label for="comfirmpassword" class="col-form-label">Comfirm
+                                                    Password:</label>
+                                                <input type="password" class="form-control password2"
+                                                    id="comfirmpassword">
+                                                <span class="error-block"></span>
+                                                <i class="fa-solid fa-eye hidep2 position-absolute text-secondary"></i>
+                                                <i
+                                                    class="fa-solid fa-eye-slash showp2 text-secondary position-absolute"></i>
+                                            </div>
+                                            <div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-outline-success">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -63,7 +125,7 @@
     </header>
     <main>
         <div class="container">
-            <div class="direct-wrapper pt-5 pb-3" data-aos="fade-left">
+            <div class="direct-wrapper pb-3" data-aos="fade-left">
                 <p>Home > <span>Vendors</span></p>
             </div>
             <div class="vendor-title" data-aos="zoom-out">
@@ -79,7 +141,8 @@
                 </div>
             </div>
             <div class="row" data-aos="fade-up">
-                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div>
                         <img src="./images/kfc_bucket.jpg" alt="" class="kfc-img">
                         <div class="d-flex pricing-wrapper">
@@ -94,7 +157,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up"
+                    data-aos-delay="200">
                     <div>
                         <img src="./images/kfc_bucket.jpg" alt="" class="kfc-img">
                         <div class="d-flex pricing-wrapper">
@@ -107,7 +171,8 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up"
+                    data-aos-delay="300">
                     <div>
                         <img src="./images/kfc_bucket.jpg" alt="" class="kfc-img">
                         <div class="d-flex pricing-wrapper">
@@ -120,7 +185,8 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up"
+                    data-aos-delay="400">
                     <div>
                         <img src="./images/kfc_bucket.jpg" alt="" class="kfc-img">
                         <div class="d-flex pricing-wrapper">
@@ -145,7 +211,8 @@
                 </div>
             </div>
             <div class="row mb-5" data-aos="fade-up">
-                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div>
                         <img src="./images/kfc_refuel.jpg" alt="" class="kfc-img">
                         <div class="d-flex pricing-wrapper">
@@ -160,7 +227,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up"
+                    data-aos-delay="200">
                     <div>
                         <img src="./images/kfc_express.jpg" alt="" class="kfc-img">
                         <div class="d-flex pricing-wrapper">
@@ -173,7 +241,8 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up"
+                    data-aos-delay="300">
                     <div>
                         <img src="./images/kfc_citizen_meal.jpg" alt="" class="kfc-img">
                         <div class="d-flex pricing-wrapper">
@@ -186,7 +255,8 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-lg-3 col-md-6 d-flex mb-5 mb-lg-0 justify-content-center" data-aos="fade-up"
+                    data-aos-delay="400">
                     <div>
                         <img src="./images/kfc_citizen_meal.jpg" alt="" class="kfc-img">
                         <div class="d-flex pricing-wrapper">

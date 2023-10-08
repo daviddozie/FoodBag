@@ -286,3 +286,43 @@ a:link {
     line-height: 27px;
     color: #696969;
 }
+
+.modal-header button:focus {
+    box-shadow: none !important;
+}
+
+.modal-body input:focus {
+    box-shadow: none !important;
+    border: 1px solid #C4C4C4 !important;
+}
+
+.modal-body label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #696969;
+}
+
+.fa-eye {
+    top: 43px;
+    right: 18px;
+    cursor: pointer;
+}
+
+.fa-eye-slash {
+    display: none;
+    top: 43px;
+    right: 18px;
+    cursor: pointer;
+}
+
+.error-block {
+    color: red;
+    font-size: 10px;
+}
+
+.error {
+    color: red;
+    font-size: 10px;
+    position: absolute;
+    bottom: -30px;
+}

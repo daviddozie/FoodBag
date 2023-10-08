@@ -1,3 +1,134 @@
+let verificationForm = document.getElementById("validateForm"),
+    PhoneNum = document.getElementById("phoneNumber"),
+    paymentMethod = document.getElementById("paymentMethod"),
+    cardNumber = document.getElementById("cardNumber"),
+    cardName = document.getElementById("cardName"),
+    expiryDate = document.getElementById("expiryDate"),
+    Cvc = document.getElementById("cvc");
+
+
+// phone number validation.
+function validatenumber(number,event) {
+    let PNRegex = /^[0-9]{7,15}$/;
+    if (number.value === "") {
+        number.nextElementSibling.innerHTML = "Please enter your phone number !";
+        // PhoneNum.style.border = "red";
+        event.preventDefault();
+        return false;
+    } else if (!number.value.match(PNRegex)) {
+        number.nextElementSibling.innerHTML = "Please enter a valid phone number !";
+        // PhoneNum.style.border = "red";
+        event.preventDefault();
+        return false;
+    } else {
+        number.nextElementSibling.innerHTML = "";
+        // PhoneNum.style.border = "";
+        return true;
+    }
+}
+
+//paymentmethod valiadtion.
+function validatepayment(payment,event) {
+    if (payment.value === "") {
+        payment.nextElementSibling.innerHTML = "Please enter payment method !";
+        // paymentMethod.style.border = 'red';
+        event.preventDefault();
+        return false;
+    } else {
+        payment.nextElementSibling.innerHTML = "";
+        // paymentMethod.style.border = '';
+        return true;
+    }
+}
+
+//card number validation.
+function validatecardnumber(cardnumber,event) {
+    let CN = /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9]{2})[0-9]{12}|3[47][0-9]{13})$/;
+    if (cardnumber.value === "") {
+        cardnumber.nextElementSibling.innerHTML = "Please enter your card number !";
+        // cardNumber.style.border = 'red';
+        event.preventDefault();
+        return false;
+    } else if (!cardnumber.value.match(CN))  {
+        cardnumber.nextElementSibling.innerHTML = "Please enter a valid card number !";
+        // cardNumber.style.border = 'red';
+        event.preventDefault();
+        return false;
+    } else {
+        cardnumber.nextElementSibling.innerHTML = "";
+        // cardNumber.style.border = '';
+        return true;
+    }
+}
+
+//card name validation.
+function validatecardname(cardname,event) {
+    let Cn  = /^[A-Za-z\s'-]+$/;
+    if (cardname.value === "") {
+        cardname.nextElementSibling.innerHTML = "Please enter your card name !";
+        // cardName.style.border = 'red';
+        event.preventDefault();
+        return false
+    } else if (cardname.valie.match(Cn)) {
+        cardname.nextElementSibling.innerHTML = "card name not found !";
+        // cardName.style.border = 'red';
+        event.preventDefault();
+        return false;
+    } else {
+        cardname.nextElementSibling.innerHTML = "";
+        // cardName.style.border = '';
+        return true;
+    }
+}
+
+//expiry date validation.
+function validateexpirydate(expirydate,event) {
+    if (expirydate.value === "") {
+        expirydate.nextElementSibling.innerHTML = "Please enter expiry date !";
+        // expiryDate.style.border = 'red';
+        event.preventDefault();
+        return false;
+    } else {
+        expirydate.nextElementSibling.innerHTML = "";
+        // expiryDate.style.border = '';
+        return true;
+    }
+}
+
+//cvc validation.
+function validatecvc(cvc,event) {
+    let cvcRegex =  /^[0-9]{3}$|^[0-9]{4}$/;
+    if (cvc.value === "") {
+        cvc.nextElementSibling.innerHTML = "Please enter card verification code !";
+        // Cvc.style.border = "red";
+        event.preventDefault();
+        return false;
+    } else if (!cvc.value.match(cvcRegex)) {
+        cvc.nextElementSibling.innerHTML = "Please enter a valid card verification code";
+        // Cvc.style.border = "red";
+        event.preventDefault();
+        return false;
+    } else {
+        cvc.nextElementSibling.innerHTML = "";
+        // Cvc.style.border = "";
+        return true;
+    }
+}
+
+function validateverification(v) {
+    validatenumber(PhoneNum, v);
+    validatepayment(paymentMethod, v);
+    validatecardnumber(cardNumber, v);
+    validatecardname(cardName, v);
+    validateexpirydate(expiryDate,v);
+    validatecvc(cvc, v);
+    
+    return true;
+}
+
+verificationForm.addEventListener("submit", validateverification);
+
+
 const exampleModal = document.getElementById('exampleModal')
 if (exampleModal) {
     exampleModal.addEventListener('show.bs.modal', event => {
@@ -17,53 +148,13 @@ if (exampleModal) {
     })
 }
 
-for (let i = 1; i <= 8; i++) {
-    let addButton = document.getElementsByClassName(`add-btn${i}`)[0];
-    let removeButton = document.getElementsByClassName("rmv-btn" + i)[0];
-    let redDot = document.getElementsByClassName("dot")[0];
-
-    addButton.addEventListener("click", () => {
-        addButton.style.display = "none";
-        removeButton.style.display = "block";
-
-        var cartCount = localStorage.getItem("addcount");
-        let s = parseInt(cartCount);
-        let output = s + 1;
-        localStorage.setItem("addcount", output);
-
-        if (output > 0) {
-            redDot.style.display = "unset"
-        } else {
-            redDot.style.display = "none"
-        }
-    })
-
-    removeButton.addEventListener("click", () => {
-        addButton.style.display = "block";
-        removeButton.style.display = "none";
-
-        var cartCount = localStorage.getItem("addcount");
-        let t = parseInt(cartCount);
-        let output = t - 1;
-        localStorage.setItem("addcount", output)
-
-        if (output <= 0) {
-            redDot.style.display = "none"
-        } else {
-            redDot.style.display = "unset"
-        }
-    })
-}
-
-localStorage.setItem("addcount", 0);
-
 let submitForm = document.getElementById("formValidation"),
     fname = document.getElementById("firstname");
-lname = document.getElementById("lastname");
-email = document.getElementById("email");
-phoneNumber = document.getElementById("phonenumber");
-password = document.getElementById("password");
-comfirmPassword = document.getElementById("comfirmpassword");
+    lname = document.getElementById("lastname");
+    email = document.getElementById("email");
+    phoneNumber = document.getElementById("phonenumber");
+    password = document.getElementById("password");
+    comfirmPassword = document.getElementById("comfirmpassword");
 
 //firstName validation.
 function firstnameValidation(firstname, event) {
@@ -213,3 +304,4 @@ for (let p = 1; p < 3; p++) {
         }
     })
 }
+

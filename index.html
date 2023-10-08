@@ -52,9 +52,71 @@
                             <a class="nav-link" href="#">Login</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <button class="btn btn-outline-success" type="submit">Sign up</button>
-                    </form>
+                    <button class="btn btn-outline-success" type="button" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Sign up</button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1><a class="navbar-brand fw-bold" href="./index.html">Food<span>Bag</span></a>
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="formValidation">
+                                        <div class="row">
+                                            <div class="mb-3 col-lg-6">
+                                                <label for="firstname" class="col-form-label">First Name:</label>
+                                                <input type="text" class="form-control" id="firstname">
+                                                <span class="error-block"></span>
+                                            </div>
+                                            <div class="mb-3 col-lg-6">
+                                                <label for="lastname" class="col-form-label">Last Name:</label>
+                                                <input type="text" class="form-control" id="lastname">
+                                                <span class="error-block"></span>
+                                            </div>
+                                            <div class="mb-3 col-lg-6">
+                                                <label for="email" class="col-form-label">Email:</label>
+                                                <input type="text" class="form-control" id="email">
+                                                <span class="error-block"></span>
+                                            </div>
+                                            <div class="mb-3 col-lg-6">
+                                                <label for="phonenumber" class="col-form-label">Phone Number:</label>
+                                                <input type="text" class="form-control" id="phonenumber">
+                                                <span class="error-block"></span>
+                                            </div>
+                                            <div class="mb-3 col-lg-6 position-relative">
+                                                <label for="password" class="col-form-label">Password:</label>
+                                                <input type="password" class="form-control password1" id="password">
+                                                <span class="error-block"></span>
+                                                <i class="fa-solid fa-eye hidep1 position-absolute text-secondary"></i>
+                                                <i
+                                                    class="fa-solid fa-eye-slash showp1 text-secondary position-absolute"></i>
+                                            </div>
+                                            <div class="mb-3 col-lg-6 position-relative">
+                                                <label for="comfirmpassword" class="col-form-label">Comfirm
+                                                    Password:</label>
+                                                <input type="password" class="form-control password2"
+                                                    id="comfirmpassword">
+                                                <span class="error-block"></span>
+                                                <i class="fa-solid fa-eye hidep2 position-absolute text-secondary"></i>
+                                                <i
+                                                    class="fa-solid fa-eye-slash showp2 text-secondary position-absolute"></i>
+                                            </div>
+                                            <div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-outline-success">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -83,7 +145,8 @@
                 <div class="interest-wrapper pt-5" data-aos="zoom-in">
                     <p>Pick an interest</p>
                     <div class="row pb-lg-5">
-                        <div class="interest-box col-lg-3 col-md-6 mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="interest-box col-lg-3 col-md-6 mb-5 mb-lg-0" data-aos="zoom-in"
+                            data-aos-delay="100">
                             <div class="border">
                                 <div class="gray-wrapper gray1">
                                     <div class="py-4 px-3">
@@ -101,7 +164,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="interest-box col-lg-3 col-md-6 mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="interest-box col-lg-3 col-md-6 mb-5 mb-lg-0" data-aos="zoom-in"
+                            data-aos-delay="200">
                             <div class="border">
                                 <div class="gray-wrapper gray2">
                                     <div class="py-4 px-3">
@@ -119,7 +183,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="interest-box col-lg-3 col-md-6 mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="interest-box col-lg-3 col-md-6 mb-5 mb-lg-0" data-aos="zoom-in"
+                            data-aos-delay="300">
                             <div class="border">
                                 <div class="gray-wrapper gray3">
                                     <div class="py-4 px-3">
@@ -137,7 +202,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="interest-box col-lg-3 col-md-6 mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="interest-box col-lg-3 col-md-6 mb-5 mb-lg-0" data-aos="zoom-in"
+                            data-aos-delay="400">
                             <div class="border">
                                 <div class="gray-wrapper gray4">
                                     <div class="py-4 px-3">
@@ -162,21 +228,24 @@
                     <div class="procedure-title text-center">
                         <h1>How we serve you</h1>
                         <div class="row py-5">
-                            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-5 mb-lg-0" data-aos="fade-up"
+                                data-aos-delay="100">
                                 <div class="procedure-wrapper">
                                     <img src="./images/man-map.png" alt="man-map">
                                     <p class="text-center">Tell us where you are</p>
                                     <span class="text-center">Select the location you want<br> us to deliver.</span>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-5 mb-lg-0" data-aos="fade-up"
+                                data-aos-delay="200">
                                 <div class="procedure-wrapper">
                                     <img src="./images/drink-cake.png" alt="drink-cake">
                                     <p class="text-center">Tell us what you want</p>
                                     <span class="text-center">Browse the type of food that<br> interest you.</span>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+                            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-5 mb-lg-0" data-aos="fade-up"
+                                data-aos-delay="300">
                                 <div class="procedure-wrapper">
                                     <img src="./images/bike-man.png" alt="bike-man">
                                     <p class="text-center">We'll come running</p>
@@ -213,10 +282,15 @@
     <footer id="footer" class="my-4">
         <div class="container mt-5">
             <h5 class="shaking-text">Join our Newsletter</h5>
-            <div class="input-group mb-3">
-                <input type="email" class="form-control" placeholder="Enter email" name="email" id="email">
-                <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="fa-solid fa-arrow-pointer fa-rotate-90"></i></button>
-            </div>
+            <form id="ValidateNewsletter">
+                <div class="input-group mb-3 position-relative">
+                    <input type="text" class="form-control" placeholder="Enter email" name="email" id="emailnews">
+                    <span class="error"></span>
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i
+                            class="fa-solid fa-arrow-pointer fa-rotate-90"></i>
+                    </button>
+                </div>
+            </form>
             <div class="d-lg-flex footer-wrapper pt-4">
                 <div class="col-lg-6 text-lg-start me-lg-auto text-center">
                     <p class="">Terms & Conditions . Privacy Policy</p>
