@@ -367,7 +367,6 @@ if (toastTrigger) {
 
 let submitBtn = document.getElementById('submitbtn');
 let procedureBtn = document.getElementById('procedurebtn');
-procedureBtn.style.display = 'none';
 
 submitBtn.addEventListener('click', () => {
     submitBtn.style.display = 'none';
@@ -375,3 +374,15 @@ submitBtn.addEventListener('click', () => {
     preventDefault();
 })
 //
+
+/*function find_max(nums) {
+    let max_num = Number.NEGATIVE_INFINITY;
+
+    for (let num of nums) {
+        if (num > max_num) {
+
+        }
+    }
+
+    console.log(max_num);
+}*/
