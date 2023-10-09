@@ -367,6 +367,7 @@ if (toastTrigger) {
 
 let submitBtn = document.getElementById('submitbtn');
 let procedureBtn = document.getElementById('procedurebtn');
+procedureBtn.style.display = "none";
 
 submitBtn.addEventListener('click', () => {
     submitBtn.style.display = 'none';
