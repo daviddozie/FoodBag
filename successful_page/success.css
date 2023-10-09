@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.navbar-brand {
+    color: #000000 !important;
+    font-size: 20px !important;
+    line-height: 30px !important;
+}
+
+.navbar-brand span {
+    color: #AD4C4C !important;
+}
+
+.fa-bars {
+    font-size: 30px !important;
+    color: #923535 !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0px 0px 10px #813b3b !important;
+    outline: none;
+}
+
+.nav-link {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+    color: #696969 !important;
+    transition: ease-in-out 0.5s;
+}
+
+.nav-link:hover {
+    color: #AD4C4C !important;
+}
+
+.btn-outline-success {
+    border: 1px solid #AD4C4C !important;
+    color: #AD4C4C !important;
+    background-color: #ffffff;
+    transition: ease-in-out 0.5s;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+}
+
+.btn-outline-success:hover {
+    color: #ffffff !important;
+    background-color: #AD4C4C;
+}
+
+.modal-header button:focus {
+    box-shadow: none !important;
+}
+
+.modal-body input:focus {
+    box-shadow: none !important;
+    border: 1px solid #C4C4C4 !important;
+}
+
+.modal-body label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #696969;
+}
+
+.fa-eye {
+    top: 43px;
+    right: 18px;
+    cursor: pointer;
+}
+
+.fa-eye-slash {
+    display: none;
+    top: 43px;
+    right: 18px;
+    cursor: pointer;
+}
+
+.error-block {
+    color: red;
+    font-size: 10px;
+}
+
+.container h5 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #5EA304;
+    line-height: 37.5px;
+}
+
+.container p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #696969;
+}
+
+.item-wrapper {
+    margin-top: 80px;
+}
+
+.spinner-border {
+    bottom: 30%;
+    left: 48%;
+    color: #5EA304 !important;
+    opacity: 20% !important;
+}

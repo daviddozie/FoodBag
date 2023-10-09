@@ -1,3 +1,56 @@
+// let submitLogin = document.getElementById('validateLogin'),
+//     userName = document.getElementById('username'),
+//     passwordLog = document.getElementById('passwordlog');
+
+// function validateUserName(user, field) {
+//     let userNameEmailRegex =  /^(?=.{3,20}$)([a-zA-Z0-9_]+)$|^([\w\.-]+@[\w\.-]+\.\w+)$/;
+//     if (user.value === '') {
+//         user.nextElementSibling.innerHTML = 'Please enter your username or email !';
+//         userName.style.borderColor = 'red';
+//         field.preventDefault();
+//         return false;
+
+//     } else if (!user.value.match(userNameEmailRegex)) {
+//         user.nextElementSibling.innerHTML = 'Please input must contain username or email !';
+//         userName.style.borderColor = 'red';
+//         field.preventDefault();
+//         return false;
+
+//     } else {
+//         user.nextElementSibling.innerHTML = '';
+//         userName.style.borderColor = '';
+//         return true;
+//     }
+// }
+
+// function validatePasswordLog(pass, field) {
+//     let passwordRegex = /^(?=.*[A-Z])(?=.*[@*+%$#&])(?=.*\d).{6,}$/;
+//     if (pass.value === "") {
+//         pass.nextElementSibling.innerHTML = "Please enter password !";
+//         pass.style.borderColor = "red";
+//         field.preventDefault();
+//         return false;
+//     } else if (!pass.value.match(passwordRegex)) {
+//         pass.nextElementSibling.innerHTML = "Your password should have a minimum of 6 characters, 1 capital letter, 1 special character eg @*$#&+% and 1 number.";
+//         pass.style.borderColor = "red";
+//         field.preventDefault();
+//         return false;
+//     } else {
+//         pass.nextElementSibling.innerHTML = "";
+//         pass.style.borderColor = "";
+//         return true;
+//     }
+// }
+
+// function validationLogin(l) {
+//     validateUserName(userName, l);
+//     validatePasswordLog(passwordLog, l);
+
+//     return true;
+// }
+
+// submitLogin.addEventListener('submit', validationLogin);
+
 let verificationForm = document.getElementById("validateForm"),
     PhoneNum = document.getElementById("phoneNumber"),
     paymentMethod = document.getElementById("paymentMethod"),
@@ -12,17 +65,17 @@ function validatenumber(number,event) {
     let PNRegex = /^[0-9]{7,15}$/;
     if (number.value === "") {
         number.nextElementSibling.innerHTML = "Please enter your phone number !";
-        // PhoneNum.style.border = "red";
+        PhoneNum.style.borderColor = "red";
         event.preventDefault();
         return false;
     } else if (!number.value.match(PNRegex)) {
         number.nextElementSibling.innerHTML = "Please enter a valid phone number !";
-        // PhoneNum.style.border = "red";
+        PhoneNum.style.borderColor = "red";
         event.preventDefault();
         return false;
     } else {
         number.nextElementSibling.innerHTML = "";
-        // PhoneNum.style.border = "";
+        PhoneNum.style.borderColor = "";
         return true;
     }
 }
@@ -31,12 +84,12 @@ function validatenumber(number,event) {
 function validatepayment(payment,event) {
     if (payment.value === "") {
         payment.nextElementSibling.innerHTML = "Please enter payment method !";
-        // paymentMethod.style.border = 'red';
+        paymentMethod.style.borderColor = 'red';
         event.preventDefault();
         return false;
     } else {
         payment.nextElementSibling.innerHTML = "";
-        // paymentMethod.style.border = '';
+        paymentMethod.style.borderColor = '';
         return true;
     }
 }
@@ -46,37 +99,31 @@ function validatecardnumber(cardnumber,event) {
     let CN = /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9]{2})[0-9]{12}|3[47][0-9]{13})$/;
     if (cardnumber.value === "") {
         cardnumber.nextElementSibling.innerHTML = "Please enter your card number !";
-        // cardNumber.style.border = 'red';
+        cardNumber.style.borderColor = 'red';
         event.preventDefault();
         return false;
     } else if (!cardnumber.value.match(CN))  {
         cardnumber.nextElementSibling.innerHTML = "Please enter a valid card number !";
-        // cardNumber.style.border = 'red';
+        cardNumber.style.borderColor = 'red';
         event.preventDefault();
         return false;
     } else {
         cardnumber.nextElementSibling.innerHTML = "";
-        // cardNumber.style.border = '';
+        cardNumber.style.borderColor = '';
         return true;
     }
 }
 
 //card name validation.
 function validatecardname(cardname,event) {
-    let Cn  = /^[A-Za-z\s'-]+$/;
     if (cardname.value === "") {
         cardname.nextElementSibling.innerHTML = "Please enter your card name !";
-        // cardName.style.border = 'red';
+        cardName.style.borderColor = 'red';
         event.preventDefault();
         return false
-    } else if (cardname.valie.match(Cn)) {
-        cardname.nextElementSibling.innerHTML = "card name not found !";
-        // cardName.style.border = 'red';
-        event.preventDefault();
-        return false;
     } else {
         cardname.nextElementSibling.innerHTML = "";
-        // cardName.style.border = '';
+        cardName.style.borderColor = '';
         return true;
     }
 }
@@ -85,32 +132,33 @@ function validatecardname(cardname,event) {
 function validateexpirydate(expirydate,event) {
     if (expirydate.value === "") {
         expirydate.nextElementSibling.innerHTML = "Please enter expiry date !";
-        // expiryDate.style.border = 'red';
+        expiryDate.style.borderColor = 'red';
         event.preventDefault();
         return false;
     } else {
         expirydate.nextElementSibling.innerHTML = "";
-        // expiryDate.style.border = '';
+        expiryDate.style.borderColor = '';
         return true;
     }
 }
 
 //cvc validation.
 function validatecvc(cvc,event) {
-    let cvcRegex =  /^[0-9]{3}$|^[0-9]{4}$/;
+    let cvcRegex =  /^[0-9]{3}$|^[0-9]{3}$/;
     if (cvc.value === "") {
         cvc.nextElementSibling.innerHTML = "Please enter card verification code !";
-        // Cvc.style.border = "red";
+        Cvc.style.borderColor = "red";
         event.preventDefault();
         return false;
+
     } else if (!cvc.value.match(cvcRegex)) {
-        cvc.nextElementSibling.innerHTML = "Please enter a valid card verification code";
-        // Cvc.style.border = "red";
-        event.preventDefault();
+        cvc.nextElementSibling.innerHTML = "Please enter a valid card verification code it must not be less or greater than 3 digit !";
+        Cvc.style.borderColor = "red";
         return false;
+
     } else {
         cvc.nextElementSibling.innerHTML = "";
-        // Cvc.style.border = "";
+        Cvc.style.borderColor = "";
         return true;
     }
 }
@@ -121,7 +169,7 @@ function validateverification(v) {
     validatecardnumber(cardNumber, v);
     validatecardname(cardName, v);
     validateexpirydate(expiryDate,v);
-    validatecvc(cvc, v);
+    validatecvc(Cvc, v);
     
     return true;
 }
@@ -147,6 +195,7 @@ if (exampleModal) {
         modalBodyInput.value = recipient
     })
 }
+
 
 let submitForm = document.getElementById("formValidation"),
     fname = document.getElementById("firstname");
@@ -305,3 +354,24 @@ for (let p = 1; p < 3; p++) {
     })
 }
 
+const toastTrigger = document.getElementById('liveToastBtn')
+const toastLiveExample = document.getElementById('liveToast')
+
+if (toastTrigger) {
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+  toastTrigger.addEventListener('click', () => {
+    toastBootstrap.show()
+  })
+}
+//
+
+let submitBtn = document.getElementById('submitbtn');
+let procedureBtn = document.getElementById('procedurebtn');
+procedureBtn.style.display = 'none';
+
+submitBtn.addEventListener('click', () => {
+    submitBtn.style.display = 'none';
+    procedureBtn.style.display = 'block';
+    preventDefault();
+})
+//
