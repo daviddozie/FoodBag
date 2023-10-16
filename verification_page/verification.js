@@ -59,7 +59,6 @@ let verificationForm = document.getElementById("validateForm"),
     expiryDate = document.getElementById("expiryDate"),
     Cvc = document.getElementById("cvc");
 
-
 // phone number validation.
 function validatenumber(number,event) {
     let PNRegex = /^[0-9]{7,15}$/;
@@ -164,13 +163,19 @@ function validatecvc(cvc,event) {
 }
 
 function validateverification(v) {
-    validatenumber(PhoneNum, v);
-    validatepayment(paymentMethod, v);
-    validatecardnumber(cardNumber, v);
-    validatecardname(cardName, v);
-    validateexpirydate(expiryDate,v);
-    validatecvc(Cvc, v);
+    v.preventDefault();
+   let phone = validatenumber(PhoneNum, v);
+   let pay =  validatepayment(paymentMethod, v);
+   let cardNum = validatecardnumber(cardNumber, v);
+   let cardUser =  validatecardname(cardName, v);
+   let expiry =  validateexpirydate(expiryDate,v);
+   let userCvc =  validatecvc(Cvc, v);
+
+    if(phone && pay && cardNum && cardUser && expiry && userCvc ) {
+        window.location.href = "../successful_page/success.html";
+    }
     
+   //
     return true;
 }
 
@@ -366,24 +371,34 @@ if (toastTrigger) {
 //
 
 let submitBtn = document.getElementById('submitbtn');
-let procedureBtn = document.getElementById('procedurebtn');
-procedureBtn.style.display = "none";
+// submitBtn.addEventListener('click', () => {
+//     if (PhoneNum.value === "") {
+//         preventDefault();
+//     } else {
+        
+//         submitBtn.innerHTML = "Loading....";
+//     }
+// })
 
 submitBtn.addEventListener('click', () => {
-    submitBtn.style.display = 'none';
-    procedureBtn.style.display = 'block';
-    preventDefault();
+    if (PhoneNum.value === "") {
+    } else {
+        submitBtn.innerHTML = "Loading....";
+    }
 })
-//
 
-/*function find_max(nums) {
+
+function find_max(nums) {
     let max_num = Number.NEGATIVE_INFINITY;
 
     for (let num of nums) {
         if (num > max_num) {
-
+            max_num = num;
         }
     }
 
     console.log(max_num);
-}*/
+}
+
+let myName = "david";
+console.log(myName);
