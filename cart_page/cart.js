@@ -17,6 +17,11 @@ if (exampleModal) {
     })
 }
 
+let checkoutBtn = document.getElementById("checkbtn");
+
+checkoutBtn.addEventListener('click', () => {
+    checkoutBtn.textContent = "Loading......";
+})
 
 let submitForm = document.getElementById("formValidation"),
     fname = document.getElementById("firstname");
@@ -192,11 +197,15 @@ const items = [
         numberCount: 1,
         totalPrice: 1200,
         originalPrice: 1200
+    },
+
+    {
+        totalPrice: 1200,
     }
 ];
 
 const totalcost = document.getElementById("sum");
-totalcost.textContent = 1200;
+totalcost.textContent = 0;
 
 
 for (let i = 0; i <= items.length; i++) {
@@ -214,16 +223,21 @@ for (let i = 0; i <= items.length; i++) {
         items[i].totalPrice = items[i].originalPrice * items[i].numberCount;
         costPrice.textContent = items[i].totalPrice.toLocaleString();
 
-        totalcost.textContent = Number(totalcost.textContent) + items[i].originalPrice;
+        const currentTotal = Number(totalcost.textContent.replace(/,/g, '')) + items[i].originalPrice;
+        totalcost.textContent = currentTotal.toLocaleString();
     });
 
     minusItem.addEventListener("click", () => {
         if (items[i].numberCount > 1) {
             items[i].numberCount--;
             itemCount1.textContent = items[i].numberCount;
+
             costPrice.textContent = (items[i].originalPrice * items[i].numberCount).toLocaleString();
-            totalcost.textContent = Number(totalcost.textContent) - items[i].originalPrice;
+
+            const currentTotal = Number(totalcost.textContent.replace(/,/g, '')) - items[i].originalPrice;
+            totalcost.textContent = currentTotal.toLocaleString();
         }
     });
 
 }
+

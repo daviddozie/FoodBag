@@ -234,3 +234,23 @@ function validateNews(e) {
 }
 
 submitNewsletter.addEventListener("submit", validateNews);
+
+function showLoader() {
+    document.querySelector(".loader").style.display = "block";
+}
+
+// Hide the loader
+function hideLoader() {
+    document.querySelector(".loader").style.display = "none";
+}
+
+// Simulate loading (you would replace this with actual loading code)
+function simulateLoading() {
+    showLoader();
+    setTimeout(function () {
+        hideLoader();
+    }, 1000); // Hide the loader after 3 seconds (replace with your actual loading time)
+}
+
+// Call simulateLoading to start the loading process
+simulateLoading();

@@ -9,6 +9,36 @@ body {
     overflow-x: hidden;
 }
 
+.bg-warning {
+    /* width: 100%;
+    min-height: 150vh; */
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #AD4C4C;
+    border-bottom: 8px solid #AD4C4C;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    right: 50%;
+    top: 12%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 60%;
+       
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 100%;
+    }
+}
+
 a:link {
     text-decoration: none;
 }
@@ -60,7 +90,7 @@ a:link {
     background-color: #AD4C4C;
 }
 
-.hero-title h1{
+.hero-title h1 {
     font-size: 40px;
     line-height: 60px;
     font-weight: 600;
@@ -186,9 +216,9 @@ a:link {
     display: flex;
     justify-content: center;
     align-items: center;
-   margin: 0px 10px;
-   color: #AD4C4C;
-   transition:  ease-in-out 0.5s;
+    margin: 0px 10px;
+    color: #AD4C4C;
+    transition: ease-in-out 0.5s;
 }
 
 .social-icons a:hover {
@@ -206,13 +236,24 @@ a:link {
 }
 
 @keyframes shake {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(0);
     }
-    10%, 30%, 50%, 70%, 90% {
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
         transform: translateX(-5px);
     }
-    20%, 40%, 60%, 80% {
+
+    20%,
+    40%,
+    60%,
+    80% {
         transform: translateX(5px);
     }
 }
@@ -237,7 +278,8 @@ a:link {
     color: #ffffff !important;
 }
 
-.btn-outline-secondary:hover::before, .btn-outline-secondary:hover::after {
+.btn-outline-secondary:hover::before,
+.btn-outline-secondary:hover::after {
     border: 3px solid #ffffff !important;
 }
 
@@ -274,6 +316,7 @@ a:link {
         transform: scale(0.5);
         opacity: 1;
     }
+
     to {
         transform: scale(1);
         opacity: 0;
