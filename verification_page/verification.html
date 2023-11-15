@@ -49,46 +49,63 @@
                             <a class="nav-link" href="../cart_page/cart.html">Cart</a>
                         </li>
                         <li class="nav-item px-lg-5">
-                            <a class="nav-link login" href="#">Login</a>
-
-                            <!-- <a class="nav-link login" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
-
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
+                            <a class="nav-link" href="#" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal2">Login</a>
+                            <div class="modal fade" id="exampleModal2" tabindex="-1"
+                                aria-labelledby="exampleModal2Label" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h1><a class="navbar-brand fw-bold"
-                                                    href="../index.html">Food<span>Bag</span></a>
+                                                    href="./index.html">Food<span>Bag</span></a>
                                             </h1>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form id="validateLogin">
-                                                <div class="mb-3">
-                                                    <input type="text" class="form-control" id="username"
-                                                        placeholder="Enter username or email">
-                                                    <span class=""></span>
-                                                </div>
-                                                <div class="mb-3 position-relative login-form">
-                                                    <input type="password" class="form-control" id="passwordlog"placeholder="Enter password">
-                                                    <span class=""></span>
-                                                    <i
-                                                        class="fa-solid fa-eye hidep2 position-absolute text-secondary"></i>
-                                                    <i
-                                                        class="fa-solid fa-eye-slash showp2 text-secondary position-absolute"></i>
-                                                </div>
+                                            <form id="loginValidation">
+                                                <div class="row">
+                                                    <div class="mb-3">
+                                                        <label for="email" class="col-form-label">Email:</label>
+                                                        <input type="text" class="form-control" id="emaillog">
+                                                        <span class="error-block"></span>
+                                                    </div>
+                                                    <div class="mb-3 col-lg-6 position-relative">
+                                                        <label for="password" class="col-form-label">Password:</label>
+                                                        <input type="password" class="form-control loginpassword1"
+                                                            id="passwordlog">
+                                                        <span class="error-block"></span>
+                                                        <i
+                                                            class="fa-solid fa-eye hidepass1 position-absolute text-secondary"></i>
+                                                        <i
+                                                            class="fa-solid fa-eye-slash showpass1 text-secondary position-absolute"></i>
+                                                    </div>
+                                                    <div class="mb-3 col-lg-6 position-relative">
+                                                        <label for="comfirmpassword" class="col-form-label">Comfirm
+                                                            Password:</label>
+                                                        <input type="password" class="form-control loginpassword2"
+                                                            id="comfirmpasswordlog">
+                                                        <span class="error-block"></span>
+                                                        <i
+                                                            class="fa-solid fa-eye hidepass2 position-absolute text-secondary"></i>
+                                                        <i
+                                                            class="fa-solid fa-eye-slash showpass2 text-secondary position-absolute"></i>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center my-4">
+                                                        <button class="btn btn-outline-danger" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#exampleModal">Sign
+                                                            up</button>
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <button type='submit'
+                                                            class="btn btn-outline-success">Login</button>
+                                                    </div>
                                             </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-outline-success">continue</button>
                                         </div>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                         </li>
                     </ul>
                     <button class="btn btn-outline-success" type="button" data-bs-toggle="modal"
@@ -220,10 +237,12 @@
                             <input type="text" class="form-control" id="cvc" placeholder="Enter card verification code">
                             <span class="error"></span>
                         </div>
-                        <div class="text-center pt-4 pb-5">
-                            <span>
-                                <button type="submit" class="btn btn-info w-75" id="submitbtn">Pay</button>
-                            </span>
+                        <div class="pt-4 pb-5 d-flex justify-content-center">
+                            <button type="submit"
+                                class="btn btn-info w-75 d-flex justify-content-center align-items-center"
+                                id="submitbtn">
+                                Pay <div class="load mx-3"></div>
+                            </button>
                         </div>
                     </div>
                 </form>

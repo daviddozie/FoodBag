@@ -622,6 +622,29 @@ label {
     color: #000000;
 }
 
+.load {
+    border: 5px solid #fff;
+    border-top: 5px solid #AD4C4C;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 100%;
+       
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 100%;
+    }
+}
+
 .btn-info {
     background-color: #AD4C4C !important;
     color: #ffffff !important;
@@ -633,6 +656,14 @@ label {
     border-radius: 5px !important;
     transition: ease-in-out 0.5s;
     cursor: pointer;
+}
+
+.btn-outline-danger {
+    padding: 8px 60px;
+    background-color: #AD4C4C !important;
+    border-radius: 40px;
+    color: #ffffff;
+    border: none;
 }
 
 .btn-info:hover {

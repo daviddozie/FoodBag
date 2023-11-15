@@ -33,6 +33,14 @@ a:link {
     outline: none;
 }
 
+.btn-outline-danger {
+    padding: 8px 60px;
+    background-color: #AD4C4C !important;
+    border-radius: 40px;
+    color: #ffffff;
+    border: none;
+}
+
 .nav-link {
     font-size: 16px !important;
     font-weight: 400 !important;

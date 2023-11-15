@@ -53,6 +53,29 @@ main {
     position: relative !important;
 }
 
+.btn-outline-danger {
+    padding: 8px 60px;
+    background-color: #AD4C4C !important;
+    border-radius: 40px;
+    color: #ffffff;
+    border: none;
+}
+
+.img-repob {
+    margin-bottom: 10px;
+}
+
+.img-kfc {
+    margin-bottom: 10px;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .bi-dot {
     position: absolute;
     bottom: 0px;
@@ -192,6 +215,117 @@ main {
 
 .kfc-img:hover {
     transform: translateY(-10px);
+}
+/* the footer */
+.fa-arrow-pointer {
+    color: #AD4C4C !important;
+    font-size: 20px;
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    transition: ease-in-out 0.5s;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-5px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(5px);
+    }
+}
+
+.input-group input:focus{
+    box-shadow: none !important;
+    border: 1px solid #AD4C4C;
+}
+
+.btn-outline-secondary {
+    position: relative !important;
+    padding: 25px 30px;
+    border: 1px solid #AD4C4C !important;
+    transition: ease-in-out 0.5s;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #AD4C4C !important;
+}
+
+.btn-outline-secondary:hover .fa-arrow-pointer {
+    color: #ffffff !important;
+}
+
+.btn-outline-secondary:hover::before,
+.btn-outline-secondary:hover::after {
+    border: 3px solid #ffffff !important;
+}
+
+.btn-outline-secondary::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 3px solid #AD4C4C;
+    transition: ease-in-out 0.5s;
+    animation: scale-btn ease-in-out 2s infinite;
+}
+
+.btn-outline-secondary::after {
+    content: '';
+    position: absolute;
+    left: 25px;
+    bottom: 23px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 3px solid #AD4C4C;
+    transition: ease-in-out 0.5s;
+    animation: scale-btn ease-in-out 1s infinite;
+    animation-delay: 0.5s;
+}
+
+
+@keyframes scale-btn {
+    from {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.footer-wrapper p {
+    font-size: 14px !important;
+    font-weight: 400;
+    line-height: 27px;
+    color: #696969;
+}
+
+.error {
+    color: red;
+    font-size: 10px;
+    position: absolute;
+    bottom: -30px;
 }
 
 @media only screen and (max-width: 990px) {

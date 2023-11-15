@@ -1,55 +1,110 @@
-// let submitLogin = document.getElementById('validateLogin'),
-//     userName = document.getElementById('username'),
-//     passwordLog = document.getElementById('passwordlog');
+const submitLogin = document.getElementById("loginValidation");
+const emailLogin = document.getElementById("emaillog");
+const passwordLogin = document.getElementById("passwordlog");
+const comfirmPasswordLogin = document.getElementById("comfirmpasswordlog");
 
-// function validateUserName(user, field) {
-//     let userNameEmailRegex =  /^(?=.{3,20}$)([a-zA-Z0-9_]+)$|^([\w\.-]+@[\w\.-]+\.\w+)$/;
-//     if (user.value === '') {
-//         user.nextElementSibling.innerHTML = 'Please enter your username or email !';
-//         userName.style.borderColor = 'red';
-//         field.preventDefault();
-//         return false;
+function loginEmail(emailfield, event) {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\s*)$/;
+    if (emailfield.value.trim() === "") {
+        emailfield.nextElementSibling.innerHTML = "Please enter your email address !";
+        emailLogin.style.borderColor = "red";
+        event.preventDefault();
+        return false;
+    } else if (!emailfield.value.match(emailRegex)) {
+        emailfield.nextElementSibling.innerHTML = "Please enter a valid email !";
+        emailLogin.style.borderColor = "red";
+        event.preventDefault();
+        return false;
+    } else {
+        emailfield.nextElementSibling.innerHTML = "";
+        emailLogin.style.borderColor = "gray";
+        return true;
+    }
+}
 
-//     } else if (!user.value.match(userNameEmailRegex)) {
-//         user.nextElementSibling.innerHTML = 'Please input must contain username or email !';
-//         userName.style.borderColor = 'red';
-//         field.preventDefault();
-//         return false;
+function loginPassword(inputPassword, event) {
+    let pwdRegex = /^(?=.*[A-Z])(?=.*[@*+%$#&])(?=.*\d).{6,}$/;
+    if (inputPassword.value === "") {
+        inputPassword.nextElementSibling.innerHTML = "Please enter your password !";
+        passwordLogin.style.borderColor = "red";
+        event.preventDefault();
+        return false;
+    } else if (!inputPassword.value.match(pwdRegex)) {
+        inputPassword.nextElementSibling.innerHTML = "Your password should have a minimum of 6 characters, 1 capital letter, 1 special character eg @*$#&+% and 1 number.";
+        passwordLogin.style.borderColor = "red";
+        event.preventDefault();
+        return false;
+    } else {
+        inputPassword.nextElementSibling.innerHTML = "";
+        passwordLogin.style.borderColor = "gray";
+        return true;
+    }
+}
 
-//     } else {
-//         user.nextElementSibling.innerHTML = '';
-//         userName.style.borderColor = '';
-//         return true;
-//     }
-// }
+function loginComfirmPassword(comfirmInput, event) {
+    if (comfirmInput.value === "") {
+        comfirmInput.nextElementSibling.innerHTML = "Please comfirm your password !";
+        comfirmPasswordLogin.style.borderColor = "red";
+        event.preventDefault();
+        return false;
+    } else if (comfirmInput.value !==  passwordLogin.value) {
+        comfirmInput.nextElementSibling.innerHTML = "Your password don't match !";
+        comfirmPasswordLogin.style.borderColor = "red";
+        event.preventDefault();
+        return false;
+    } else {
+        comfirmInput.nextElementSibling.innerHTML = "";
+        comfirmPasswordLogin.style.borderColor = "gray";
+        return true;
+    }
+}
 
-// function validatePasswordLog(pass, field) {
-//     let passwordRegex = /^(?=.*[A-Z])(?=.*[@*+%$#&])(?=.*\d).{6,}$/;
-//     if (pass.value === "") {
-//         pass.nextElementSibling.innerHTML = "Please enter password !";
-//         pass.style.borderColor = "red";
-//         field.preventDefault();
-//         return false;
-//     } else if (!pass.value.match(passwordRegex)) {
-//         pass.nextElementSibling.innerHTML = "Your password should have a minimum of 6 characters, 1 capital letter, 1 special character eg @*$#&+% and 1 number.";
-//         pass.style.borderColor = "red";
-//         field.preventDefault();
-//         return false;
-//     } else {
-//         pass.nextElementSibling.innerHTML = "";
-//         pass.style.borderColor = "";
-//         return true;
-//     }
-// }
+function loginValidation(e) {
+    e.preventDefault();
 
-// function validationLogin(l) {
-//     validateUserName(userName, l);
-//     validatePasswordLog(passwordLog, l);
+    let emailLogine = loginEmail(emailLogin, e);
+    let passwordLogine = loginPassword(passwordLogin, e);
+    let comfirmPasswordLogine = loginComfirmPassword(comfirmPasswordLogin, e)
+     
+    if (emailLogine && passwordLogine && comfirmPasswordLogine) {
+        window.location.href = "./vendors_page/vendor.html";
+    }
 
-//     return true;
-// }
+    return true;
+}
 
-// submitLogin.addEventListener('submit', validationLogin);
+submitLogin.addEventListener('submit', loginValidation);
+
+for (let p = 1; p < 3; p++) {
+    let passwordHide = document.getElementsByClassName(`hidepass${p}`)[0];
+    let passwordShow = document.getElementsByClassName(`showpass${p}`)[0];
+    let passwordText = document.getElementsByClassName(`loginpassword${p}`)[0];
+
+    passwordHide.addEventListener("click", function () {
+        passwordHide.style.display = "none";
+        passwordShow.style.display = "unset";
+        if (passwordText.type === "password") {
+            passwordText.type = "text";
+
+        } else {
+            passwordText.type = "password";
+        }
+    })
+
+    passwordShow.addEventListener("click", function () {
+        passwordShow.style.display = "none";
+        passwordHide.style.display = "unset";
+        if (passwordText.type === "text") {
+            passwordText.type = "password";
+
+        } else {
+            passwordText.type = "text";
+        }
+    })
+}
+
+//end of login validation.
+
 
 let verificationForm = document.getElementById("validateForm"),
     PhoneNum = document.getElementById("phoneNumber"),
@@ -170,12 +225,15 @@ function validateverification(v) {
    let cardUser =  validatecardname(cardName, v);
    let expiry =  validateexpirydate(expiryDate,v);
    let userCvc =  validatecvc(Cvc, v);
+   const loader = document.querySelector('.load');
 
     if(phone && pay && cardNum && cardUser && expiry && userCvc ) {
-        window.location.href = "../successful_page/success.html";
+        loader.style.display = "block";
+       setTimeout(function () {
+            window.location.href = "../successful_page/success.html"; 
+       }, 2000)
     }
     
-   //
     return true;
 }
 
@@ -370,22 +428,8 @@ if (toastTrigger) {
 }
 //
 
-let submitBtn = document.getElementById('submitbtn');
-// submitBtn.addEventListener('click', () => {
-//     if (PhoneNum.value === "") {
-//         preventDefault();
-//     } else {
-        
-//         submitBtn.innerHTML = "Loading....";
-//     }
-// })
 
-submitBtn.addEventListener('click', () => {
-    if (PhoneNum.value === "") {
-    } else {
-        submitBtn.innerHTML = "Loading....";
-    }
-})
+
 
 
 function find_max(nums) {

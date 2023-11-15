@@ -1,3 +1,110 @@
+const submitLogin = document.getElementById("loginValidation");
+const emailLogin = document.getElementById("emaillog");
+const passwordLogin = document.getElementById("passwordlog");
+const comfirmPasswordLogin = document.getElementById("comfirmpasswordlog");
+
+function loginEmail(emailfield, event) {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\s*)$/;
+    if (emailfield.value.trim() === "") {
+        emailfield.nextElementSibling.innerHTML = "Please enter your email address !";
+        emailLogin.style.borderColor = "red";
+        event.preventDefault();
+        return false;
+    } else if (!emailfield.value.match(emailRegex)) {
+        emailfield.nextElementSibling.innerHTML = "Please enter a valid email !";
+        emailLogin.style.borderColor = "red";
+        event.preventDefault();
+        return false;
+    } else {
+        emailfield.nextElementSibling.innerHTML = "";
+        emailLogin.style.borderColor = "gray";
+        return true;
+    }
+}
+
+function loginPassword(inputPassword, event) {
+    let pwdRegex = /^(?=.*[A-Z])(?=.*[@*+%$#&])(?=.*\d).{6,}$/;
+    if (inputPassword.value === "") {
+        inputPassword.nextElementSibling.innerHTML = "Please enter your password !";
+        passwordLogin.style.borderColor = "red";
+        event.preventDefault();
+        return false;
+    } else if (!inputPassword.value.match(pwdRegex)) {
+        inputPassword.nextElementSibling.innerHTML = "Your password should have a minimum of 6 characters, 1 capital letter, 1 special character eg @*$#&+% and 1 number.";
+        passwordLogin.style.borderColor = "red";
+        event.preventDefault();
+        return false;
+    } else {
+        inputPassword.nextElementSibling.innerHTML = "";
+        passwordLogin.style.borderColor = "gray";
+        return true;
+    }
+}
+
+function loginComfirmPassword(comfirmInput, event) {
+    if (comfirmInput.value === "") {
+        comfirmInput.nextElementSibling.innerHTML = "Please comfirm your password !";
+        comfirmPasswordLogin.style.borderColor = "red";
+        event.preventDefault();
+        return false;
+    } else if (comfirmInput.value !==  passwordLogin.value) {
+        comfirmInput.nextElementSibling.innerHTML = "Your password don't match !";
+        comfirmPasswordLogin.style.borderColor = "red";
+        event.preventDefault();
+        return false;
+    } else {
+        comfirmInput.nextElementSibling.innerHTML = "";
+        comfirmPasswordLogin.style.borderColor = "gray";
+        return true;
+    }
+}
+
+function loginValidation(e) {
+    e.preventDefault();
+
+    let emailLogine = loginEmail(emailLogin, e);
+    let passwordLogine = loginPassword(passwordLogin, e);
+    let comfirmPasswordLogine = loginComfirmPassword(comfirmPasswordLogin, e)
+     
+    if (emailLogine && passwordLogine && comfirmPasswordLogine) {
+        window.location.href = "./vendors_page/vendor.html";
+    }
+
+    return true;
+}
+
+submitLogin.addEventListener('submit', loginValidation);
+
+for (let p = 1; p < 3; p++) {
+    let passwordHide = document.getElementsByClassName(`hidepass${p}`)[0];
+    let passwordShow = document.getElementsByClassName(`showpass${p}`)[0];
+    let passwordText = document.getElementsByClassName(`loginpassword${p}`)[0];
+
+    passwordHide.addEventListener("click", function () {
+        passwordHide.style.display = "none";
+        passwordShow.style.display = "unset";
+        if (passwordText.type === "password") {
+            passwordText.type = "text";
+
+        } else {
+            passwordText.type = "password";
+        }
+    })
+
+    passwordShow.addEventListener("click", function () {
+        passwordShow.style.display = "none";
+        passwordHide.style.display = "unset";
+        if (passwordText.type === "text") {
+            passwordText.type = "password";
+
+        } else {
+            passwordText.type = "text";
+        }
+    })
+}
+
+//end of login validation.
+
 const exampleModal = document.getElementById('exampleModal')
 if (exampleModal) {
     exampleModal.addEventListener('show.bs.modal', event => {
@@ -206,6 +313,9 @@ for (let p = 1; p < 3; p++) {
     })
 }
 
+
+
+//////////////////////////////////////////////////
 let submitNewsletter = document.getElementById("ValidateNewsletter"),
     emailNews = document.getElementById("emailnews");
 

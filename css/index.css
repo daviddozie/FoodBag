@@ -174,6 +174,20 @@ a:link {
     border: 1px solid #F2F2F2;
 }
 
+.btn-outline-danger {
+    padding: 8px 60px;
+    background-color: #AD4C4C !important;
+    border-radius: 40px;
+    color: #ffffff;
+    border: none;
+}
+
+.procedure-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .procedure-title h1 {
     font-size: 30px;
     font-weight: 600;

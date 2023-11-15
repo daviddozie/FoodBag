@@ -153,6 +153,37 @@ main {
     transition: ease-in-out 0.5s;
 }
 
+.load {
+    border: 5px solid #fff;
+    border-top: 5px solid #AD4C4C;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 100%;
+       
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 100%;
+    }
+}
+
+.btn-outline-danger {
+    padding: 8px 60px;
+    background-color: #AD4C4C !important;
+    border-radius: 40px;
+    color: #ffffff;
+    border: none;
+}
+
 .btn-info:hover {
     background-color: #a53030;
     transform: scale(1.01);
