@@ -28,6 +28,8 @@
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--reCaptcha-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!--css-->
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -91,14 +93,23 @@
                                                         <i
                                                             class="fa-solid fa-eye-slash showpass2 text-secondary position-absolute"></i>
                                                     </div>
-                                                    <div class="d-flex justify-content-center my-4">
-                                                        <button class="btn btn-outline-danger" type="button"
-                                                            data-bs-toggle="modal" data-bs-target="#exampleModal">Sign
-                                                            up</button>
+                                                    <div class="position-relative">
+                                                        <div class="d-flex justify-content-center my-4">
+                                                            <button class="btn btn-outline-danger" type="button"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#exampleModal">Sign
+                                                                up</button>
+                                                        </div>
+                                                        <div class="d-flex justify-content-center">
+                                                            <div class="g-recaptcha"
+                                                                data-sitekey="6LfpZREpAAAAAH_sQoUUy15XNLIivUr4M5W2kYmV">
+                                                            </div>
+                                                        </div>
+                                                        <p class="error-message text-center position-absolute"></p>
                                                     </div>
-
                                                     <div class="modal-footer">
-                                                        <button type='submit' class="btn btn-outline-success">Login</button>
+                                                        <button type='submit'
+                                                            class="btn btn-outline-success">Login</button>
                                                     </div>
                                             </form>
                                         </div>

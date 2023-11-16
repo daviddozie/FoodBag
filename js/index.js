@@ -17,7 +17,7 @@ function loginEmail(emailfield, event) {
         return false;
     } else {
         emailfield.nextElementSibling.innerHTML = "";
-        emailLogin.style.borderColor = "gray";
+        emailLogin.style.border = "2px solid green";
         return true;
     }
 }
@@ -36,7 +36,7 @@ function loginPassword(inputPassword, event) {
         return false;
     } else {
         inputPassword.nextElementSibling.innerHTML = "";
-        passwordLogin.style.borderColor = "gray";
+        passwordLogin.style.border = "2px solid green";
         return true;
     }
 }
@@ -54,8 +54,20 @@ function loginComfirmPassword(comfirmInput, event) {
         return false;
     } else {
         comfirmInput.nextElementSibling.innerHTML = "";
-        comfirmPasswordLogin.style.borderColor = "gray";
+        comfirmPasswordLogin.style.border = "2px solid green";
         return true;
+    }
+}
+
+function captcha() {
+    const captchaResponse = grecaptcha.getResponse();
+    const errorMessage = document.querySelector('.error-message');
+
+    if(!captchaResponse.length > 0) {
+        errorMessage.innerHTML = "Please complete the reCAPTCHA!";
+        throw new Error("Captcha not complete")
+    } else {
+        errorMessage.innerHTML = "";
     }
 }
 
@@ -65,6 +77,12 @@ function loginValidation(e) {
     let emailLogine = loginEmail(emailLogin, e);
     let passwordLogine = loginPassword(passwordLogin, e);
     let comfirmPasswordLogine = loginComfirmPassword(comfirmPasswordLogin, e)
+    
+    try {
+        captcha();
+    } catch (error) {
+        return false;
+    }
      
     if (emailLogine && passwordLogine && comfirmPasswordLogine) {
         window.location.href = "./vendors_page/vendor.html";
@@ -173,7 +191,7 @@ function firstnameValidation(firstname, event) {
         return false;
     } else {
         firstname.nextElementSibling.innerHTML = "";
-        fname.style.borderColor = "";
+        fname.style.border = "2px solid green";
         return true;
     }
 }
@@ -187,7 +205,7 @@ function lastnameValidation(lastname, event) {
         return false;
     } else {
         lastname.nextElementSibling.innerHTML = "";
-        lname.style.borderColor = "";
+        lname.style.border = "2px solid green";
         return true;
     }
 }
@@ -207,7 +225,7 @@ function emailValidation(email, event) {
         return false;
     } else {
         email.nextElementSibling.innerHTML = "";
-        email.style.borderColor = "";
+        email.style.border = "2px solid green";
         return true;
     }
 }
@@ -227,7 +245,7 @@ function phonenumberValidation(number, event) {
         return false;
     } else {
         number.nextElementSibling.innerHTML = "";
-        phoneNumber.style.borderColor = "";
+        phoneNumber.style.border = "2px solid green";
         return true;
     }
 }
@@ -247,7 +265,7 @@ function passwordValidation(password, event) {
         return false;
     } else {
         password.nextElementSibling.innerHTML = "";
-        password.style.borderColor = "";
+        password.style.border = "2px solid green";
         return true;
     }
 }
@@ -266,7 +284,7 @@ function comfirmpasswordValidation(comfirmpassword, event) {
         return false;
     } else {
         comfirmpassword.nextElementSibling.innerHTML = "";
-        comfirmpassword.style.borderColor = "";
+        comfirmpassword.style.border = "2px solid green";
         return true;
     }
 }

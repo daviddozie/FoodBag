@@ -59,8 +59,26 @@ function loginComfirmPassword(comfirmInput, event) {
     }
 }
 
+function captcha() {
+    const captchaResponse = grecaptcha.getResponse();
+    const errorMessage = document.querySelector('.error-message');
+
+    if(!captchaResponse.length > 0) {
+        errorMessage.innerHTML = "Please complete the reCAPTCHA!";
+        throw new Error("Captcha not complete")
+    } else {
+        errorMessage.innerHTML = "";
+    }
+}
+
 function loginValidation(e) {
     e.preventDefault();
+
+    try {
+        captcha();
+    } catch (error) {
+        return false;
+    }
 
     let emailLogine = loginEmail(emailLogin, e);
     let passwordLogine = loginPassword(passwordLogin, e);

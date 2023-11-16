@@ -676,3 +676,10 @@ label {
     color: red;
     font-size: 12px;
 }
+
+.error-message {
+    color: red;
+    font-size: 10px;
+    bottom: 28%;
+    left: 30%
+}
