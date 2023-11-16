@@ -1,3 +1,7 @@
+var inputfield = document.querySelector('.phoneTel');
+window.intlTelInput(inputfield,{});
+
+
 const submitLogin = document.getElementById("loginValidation");
 const emailLogin = document.getElementById("emaillog");
 const passwordLogin = document.getElementById("passwordlog");
@@ -123,9 +127,8 @@ for (let p = 1; p < 3; p++) {
 
 //end of login validation.
 
-
 let verificationForm = document.getElementById("validateForm"),
-    PhoneNum = document.getElementById("phoneNumber"),
+    // PhoneNum = document.getElementById("phoneNumber"),
     paymentMethod = document.getElementById("paymentMethod"),
     cardNumber = document.getElementById("cardNumber"),
     cardName = document.getElementById("cardName"),
@@ -237,7 +240,7 @@ function validatecvc(cvc,event) {
 
 function validateverification(v) {
     v.preventDefault();
-   let phone = validatenumber(PhoneNum, v);
+//    let phone = validatenumber(PhoneNum, v);
    let pay =  validatepayment(paymentMethod, v);
    let cardNum = validatecardnumber(cardNumber, v);
    let cardUser =  validatecardname(cardName, v);
@@ -245,7 +248,7 @@ function validateverification(v) {
    let userCvc =  validatecvc(Cvc, v);
    const loader = document.querySelector('.load');
 
-    if(phone && pay && cardNum && cardUser && expiry && userCvc ) {
+    if(pay && cardNum && cardUser && expiry && userCvc ) {
         loader.style.display = "block";
        setTimeout(function () {
             window.location.href = "../successful_page/success.html"; 

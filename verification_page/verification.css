@@ -548,6 +548,10 @@ a:link {
     margin-bottom: 0px !important;
 }
 
+#phoneNumber {
+    width: 1120px !important;
+}
+
 .vendor-title p {
     font-size: 16px;
     font-weight: 400;
@@ -570,29 +574,13 @@ a:link {
     color: #696969;
 }
 
-.radio-btn-wrapper {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid #AD4C4C;
-    color: #AD4C4C;
-    cursor: pointer;
+.border-wrapper {
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-.radio-btn {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #AD4C4C;
-    border: none;
-    opacity: 0;
-}
-
-.radio-btn:focus {
-    opacity: 1;
+.border {
+    width: 100% !important;
 }
 
 #verification input {
@@ -682,4 +670,58 @@ label {
     font-size: 10px;
     bottom: 28%;
     left: 30%
+}
+
+@media only screen and (max-width: 1024px) {
+    #phoneNumber {
+        width: 936px !important;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    #phoneNumber {
+        width: 695px !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #phoneNumber {
+        width: 417px !important;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    #phoneNumber {
+        width: 350px !important;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    #phoneNumber {
+        width: 365px !important;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    #phoneNumber {
+        width: 350px !important;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    #phoneNumber {
+        width: 325px !important;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    #phoneNumber {
+        width: 310px !important;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #phoneNumber {
+        width: 297px !important;
+    }
 }

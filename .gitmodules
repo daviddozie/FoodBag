@@ -1,0 +1,3 @@
+[submodule "phone-number-validation"]
+	path = phone-number-validation
+	url = git@github.com:Kenkarate/phone-number-validation.git
